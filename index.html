@@ -4,40 +4,212 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>测试input键盘</title>
+  <title>移动端键盘调用测试</title>
   <style>
-    pre {
-      display: block;
-      font-family: monospace;
-      white-space: pre;
-      margin: 2em 0px;
+    * {
+      box-sizing: border-box;
     }
-    code {
+    body {
+      margin: 0;
+      font-size: 16px;
+      font-family: Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+      background: #f6f6f6;
+    }
+    section {
+      margin-bottom: 8px;
+      padding: 16px;
+      background: #fff;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    pre {
+      width: 100%;
+      display: block;
       line-height: 1.8;
-      font-family: Menlo,Monaco,Consolas,Courier,monospace;
-      font-size: 12px;
       padding: 18px 24px;
       background-color: #fafafa;
       border: 1px solid #eaeefb;
-      margin-bottom: 25px;
-      border-radius: 4px;
-      -webkit-font-smoothing: auto;
+      border-radius: 8px;
+      font-size: 14px;
+      overflow-y: auto;
+    }
+    code {
+      font-family: Menlo,Monaco,Consolas,Courier,monospace;
+    }
+    input {
+      width: 100%;
+      height: 40px;
+      font-size: 16px;
+    }
+    .tips {
+      padding-left: 8px;
+      font-size: 12px;
+      color: #999;
     }
   </style>
 </head>
 <body>
-  <h2>Tel: 电话键盘</h2>
-  <input type="tel">
-  <pre>
-<code>&lt;input type="tel"&gt;</code>
-  </pre>
-  <hr>
+  <section>
+    <h2>普通文本键盘</h2>
+    <input type="text">
+    <pre><code>&lt;input type="text"&gt;</code></pre>
+  </section>
 
-  <h2>number: 数字键盘</h2>
-  <input type="number" pattern="\d*">
-  <pre>
-<code>&lt;input type="number" pattern="\d*"&gt;</code>
-  </pre>
-  <hr>
+  <section>
+    <h2>带「前往」按钮的文本键盘</h2>
+    <form action="">
+      <input type="text">
+    </form>
+    <pre><code>&lt;form action=""&gt;
+  &lt;input type="text"&gt;
+&lt;/form&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>搜索键盘</h2>
+    <form action="">
+      <input type="search">
+    </form>
+    <pre><code>&lt;form action=""&gt;
+  &lt;input type="search"&gt;
+&lt;/form&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>网址键盘</h2>
+    <input type="url">
+    <pre><code>&lt;input type="url"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>邮箱键盘</h2>
+    <input type="email">
+    <pre><code>&lt;input type="email"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>电话键盘</h2>
+    <input type="tel">
+    <pre><code>&lt;input type="tel"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>密码键盘</h2>
+    <input type="password">
+    <pre><code>&lt;input type="password"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>数字键盘</h2>
+    <input type="number">
+    <pre><code>&lt;input type="number"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>九宫格数字键盘</h2>
+    <input type="number" pattern="\d*">
+    <pre><code>&lt;input type="number" pattern="\d*"&gt;
+// or
+&lt;input type="number" pattern="[0-9]*"</code></pre>
+  </section>
+
+  <section>
+    <h2>带小数点九宫格数字键盘</h2>
+    <input type="number" inputmode="decimal">
+    <pre><code>&lt;input type="number" inputmode="decimal"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>复选框</h2>
+    <input type="checkbox" style="width: 40px;">
+    <pre><code>&lt;input type="checkbox"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>单选框</h2>
+    <input type="radio" style="width: 40px;">
+    <pre><code>&lt;input type="radio"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>进度条</h2>
+    <input type="range">
+    <pre><code>&lt;input type="range"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>颜色选择器</h2>
+    <input type="color" style="width: 40px;">
+    <pre><code>&lt;input type="color"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>时间日期选择器</h2>
+    <input type="datetime-local">
+    <pre><code>&lt;input type="datetime-local"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>月份选择器</h2>
+    <input type="month">
+    <pre><code>&lt;input type="month"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>周选择器</h2>
+    <input type="week">
+    <pre><code>&lt;input type="week"&gt;</code></pre>
+    <p class="tips">IOS 不支持</p>
+  </section>
+
+  <section>
+    <h2>日期选择器</h2>
+    <input type="date">
+    <pre><code>&lt;input type="date"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>时间选择器</h2>
+    <input type="time">
+    <pre><code>&lt;input type="time"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>普通按钮</h2>
+    <input type="button">
+    <pre><code>&lt;input type="button"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>重置按钮</h2>
+    <input type="reset">
+    <pre><code>&lt;input type="reset"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>提交按钮</h2>
+    <input type="submit">
+    <pre><code>&lt;input type="submit"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>图片</h2>
+    <input type="image" src="" style="width: 300px; height: 200px;">
+    <pre><code>&lt;input type="image" src=""&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>文件</h2>
+    <input type="file">
+    <pre><code>&lt;input type="file"&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>隐藏</h2>
+    <input type="hidden">
+    <pre><code>&lt;input type="hidden"&gt;</code></pre>
+  </section>
 </body>
 </html>
